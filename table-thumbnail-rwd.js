@@ -2,7 +2,7 @@
 
 let readyWidth = []
 
-TableThumbnailRWD = function (table, options) {
+let TableThumbnailRWD = function (table, options) {
   if (typeof($) !== 'function') {
     throw 'jQuery is requirement. Please install from https://code.jquery.com'
   }
@@ -101,4 +101,14 @@ TableThumbnailRWD = function (table, options) {
   
   insertCSSRule()
   setupTableThumbnail(table)
+}
+
+if (typeof(window) === 'object') {
+  window.TableThumbnailRWD = TableThumbnailRWD
+}
+if (typeof(exports) !== 'undefined') {
+  exports.default = TableThumbnailRWD
+}
+if (typeof(module) !== 'undefined') {
+  module.exports = TableThumbnailRWD
 }

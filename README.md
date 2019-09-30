@@ -17,7 +17,9 @@ Demonstrate table layout with SVG in RWD
 ````js
 $(() => {
   $('table').each((i, table) => {
-    TableThumbnailRWD(table)
+    TableThumbnailRWD(table, {
+      // options...
+    })
   })
 })
 ````
