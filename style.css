@@ -1,4 +1,4 @@
-.table-snapshot {
+.table-thumbnail {
   display: none;
   
   cursor: pointer;
@@ -7,11 +7,11 @@
 }
 
 @media (max-width: 680px) {
-  table.table-snapshot-ready {
+  table.table-thumbnail-ready {
     display: none;
   }
   
-  .table-snapshot {
+  .table-thumbnail {
     display: block;
   }
 }

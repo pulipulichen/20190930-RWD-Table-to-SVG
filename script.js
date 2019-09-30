@@ -1,32 +1,32 @@
 /* global domtoimage */
 
 let CONFIG = {
-  snapshotMinWidth: '800px',
-  snapshotTitle: 'Open table in new window',
+  thumbnailMinWidth: '800px',
+  thumbnailTitle: 'Open table in new window',
   popupCssURL: null
 }
 
 let init = () => {
   $('table').each((i, table) => {
-    setupTableSnapshot(table)
+    setupTableThumbnail(table)
   })
 }
 
-let setupTableSnapshot = (table) => {
-  table.style.minWidth = CONFIG.snapshotMinWidth
+let setupTableThumbnail = (table) => {
+  table.style.minWidth = CONFIG.thumbnailMinWidth
   domtoimage.toSvg(table)
     .then(function (dataUrl) {
         var img = new Image();
         img.src = dataUrl;
         let $img = $(img)
-        $img.addClass('table-snapshot')
-                .attr('title', CONFIG.snapshotTitle)
+        $img.addClass('table-thumbnail')
+                .attr('title', CONFIG.thumbnailTitle)
                 .insertAfter(table)
         $img.click(function () {
           let $table = $(this).prev()
           popupTable($table)
         })
-        $(table).addClass('table-snapshot-ready')
+        $(table).addClass('table-thumbnail-ready')
         table.style.minWidth = undefined
     })
     .catch(function (error) {
