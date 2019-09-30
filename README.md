@@ -9,6 +9,8 @@ Demonstrate table layout with SVG in RWD
 # Install
 
 ````html
+<script src="https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/vandors/jquery/jquery-3.4.1.min.js"></script>
+<script src="https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/vandors/dom-to-image/dom-to-image.js"></script>
 <script src="https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/table-thumbnail-rwd.js"></script>
 ````
 

@@ -97,6 +97,7 @@ let TableThumbnailRWD = function (table, options) {
       html = html + `<link href='${CONFIG.popupCssURL}' rel='stylesheet' type='text/css'/>`
     }
 
+    $(win.document.head).append(`<base href="${location.href}" target="_self">`)
     win.document.body.innerHTML = html
   }
 
