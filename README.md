@@ -9,7 +9,6 @@ Demonstrate table layout with SVG in RWD
 # Install
 
 ````html
-<link href='https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/table-thumbnail-rwd.css' rel='stylesheet' type='text/css'/>
 <script src="https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/table-thumbnail-rwd.js"></script>
 ````
 
@@ -27,6 +26,7 @@ $(() => {
 
 ````
 TableThumbnailRWD(table, {
+  showThumbnailWidthPX: 640,
   thumbnailMinWidth: '800px',
   thumbnailTitle: 'Open table in new window',
   popupCssURL: '//pulipulichen.github.io/20190930-RWD-Table-to-SVG/popup.css'

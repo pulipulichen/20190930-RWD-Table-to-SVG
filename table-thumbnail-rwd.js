@@ -21,9 +21,11 @@ TableThumbnailRWD = function (table, options) {
     popupCssURL: null
   }
   
-  for (let key in CONFIG) {
-    if (typeof(options[key]) !== 'undefined') {
-      CONFIG[key] = options[key]
+  if (typeof(options) === 'object') {
+    for (let key in CONFIG) {
+      if (typeof(options[key]) !== 'undefined') {
+        CONFIG[key] = options[key]
+      }
     }
   }
   
@@ -91,7 +93,7 @@ TableThumbnailRWD = function (table, options) {
 
     let html = $table.prop('outerHTML')
     if (typeof(CONFIG.popupCssURL) === 'string') {
-      html = html + + `<link href='${CONFIG.popupCssURL}' rel='stylesheet' type='text/css'/>`
+      html = html + `<link href='${CONFIG.popupCssURL}' rel='stylesheet' type='text/css'/>`
     }
 
     win.document.body.innerHTML = html
