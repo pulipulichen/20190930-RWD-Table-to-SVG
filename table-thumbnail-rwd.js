@@ -67,9 +67,14 @@ let TableThumbnailRWD = function (table, options) {
     table.style.minWidth = CONFIG.thumbnailMinWidth
     domtoimage.toSvg(table)
             .then(function (dataUrl) {
+              /*
               var img = new Image();
               img.src = dataUrl;
               let $img = $(img)
+              */
+              let svg = dataUrl.slice(dataUrl.indexOf('<svg'))
+              let $img = $(`<object type="image/svg+xml" data="${svg}"></object>`)
+              
               $img.addClass('table-thumbnail')
                       .addClass(tableClassname)
                       .attr('title', CONFIG.thumbnailTitle)
@@ -78,6 +83,7 @@ let TableThumbnailRWD = function (table, options) {
                 let $table = $(this).prev()
                 popupTable($table)
               })
+              
               $(table).addClass('table-thumbnail-ready')
                       .addClass(tableClassname)
               table.style.minWidth = undefined
