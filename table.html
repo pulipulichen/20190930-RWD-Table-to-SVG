@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="icon.png" />
     
-    <link href='style.css' rel='stylesheet' type='text/css'/>
     
     <script src="vandors/jquery/jquery-3.4.1.min.js"></script>
     <script src="vandors/dom-to-image/dom-to-image.js"></script>
-    <script src="script.js"></script>
+    
+    <link href='table-thumbnail-rwd.css' rel='stylesheet' type='text/css'/>
+    <script src="table-thumbnail-rwd.js"></script>
+    <script>
+      $(() => {
+        $('table').each((i, table) => {
+          TableThumbnailRWD(table)
+        })
+      })
+    </script>
   </head>
   <body>
     <table border="1">

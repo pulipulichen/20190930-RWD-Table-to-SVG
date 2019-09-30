@@ -6,6 +6,35 @@ Demonstrate table layout with SVG in RWD
 
 ----
 
+# Install
+
+````html
+<link href='https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/table-thumbnail-rwd.css' rel='stylesheet' type='text/css'/>
+<script src="https://pulipulichen.github.io/20190930-RWD-Table-to-SVG/table-thumbnail-rwd.js"></script>
+````
+
+# Usage
+
+````js
+$(() => {
+  $('table').each((i, table) => {
+    TableThumbnailRWD(table)
+  })
+})
+````
+
+# Options
+
+````
+TableThumbnailRWD(table, {
+  thumbnailMinWidth: '800px',
+  thumbnailTitle: 'Open table in new window',
+  popupCssURL: '//pulipulichen.github.io/20190930-RWD-Table-to-SVG/popup.css'
+})
+````
+
+----
+
 # Resources
 
 - Icon: https://findicons.com/icon/263276/table2
